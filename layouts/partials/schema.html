@@ -1,6 +1,8 @@
 {{- /* JSON-LD LocalBusiness — yerel SEO. İletişim alanları params'tan gelir (placeholder). */ -}}
 {{- $img := "" -}}
 {{- with resources.Get (printf "images/%s" (.Params.ogImage | default site.Params.ogImage)) -}}{{- $img = (.Fill "1200x630 jpg q82 Center").Permalink -}}{{- end -}}
+{{- $logo := "" -}}
+{{- with resources.Get "images/logo.png" -}}{{- $logo = (.Resize "256x png Lanczos").Permalink -}}{{- end -}}
 {{- $data := dict
   "@context" "https://schema.org"
   "@type" "ProfessionalService"
@@ -11,6 +13,7 @@
   "email" site.Params.email
   "areaServed" site.Params.region
   "image" $img
+  "logo" $logo
   "knowsAbout" (slice "Sanayi dalgıçlığı" "Sualtı bakım onarım" "Gemi gövde kontrolü" "Liman ve iskele sualtı çalışmaları" "Sualtı kaynak ve kesim" "Sualtı fotoğraf ve video raporlama")
 -}}
 <script type="application/ld+json">{{ $data | jsonify }}</script>

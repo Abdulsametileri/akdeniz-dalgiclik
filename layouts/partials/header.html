@@ -2,12 +2,10 @@
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="/" aria-label="{{ site.Params.brand }} ana sayfa">
-      <svg class="brand-mark" viewBox="0 0 40 40" width="38" height="38" aria-hidden="true">
-        <rect width="40" height="40" rx="10" fill="#071827"/>
-        <circle cx="27.5" cy="12.5" r="3.8" fill="#F97316"/>
-        <path d="M5 25c3 0 3-2.2 6-2.2s3 2.2 6 2.2 3-2.2 6-2.2 3 2.2 6 2.2 3-2.2 4-2.2" fill="none" stroke="#0EA5E9" stroke-width="2.4" stroke-linecap="round"/>
-        <path d="M5 30.5c3 0 3-2.2 6-2.2s3 2.2 6 2.2 3-2.2 6-2.2 3 2.2 6 2.2 3-2.2 4-2.2" fill="none" stroke="#F8FAFC" stroke-width="2" stroke-linecap="round" opacity=".65"/>
-      </svg>
+      {{- with resources.Get "images/logo.png" }}
+      {{- $m := .Resize "96x webp q85 Lanczos" }}
+      <img class="brand-mark" src="{{ $m.RelPermalink }}" width="44" height="45" alt="{{ site.Params.brand }} logo" loading="eager" decoding="async" fetchpriority="high">
+      {{- end }}
       <span class="brand-text"><strong>Akdeniz</strong>&nbsp;Dalgıçlık</span>
     </a>
 

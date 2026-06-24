@@ -3,12 +3,10 @@
   <div class="container footer-grid">
     <div class="footer-brand">
       <div class="footer-logo">
-        <svg viewBox="0 0 40 40" width="34" height="34" aria-hidden="true">
-          <rect width="40" height="40" rx="10" fill="#0B3A53"/>
-          <circle cx="27.5" cy="12.5" r="3.8" fill="#F97316"/>
-          <path d="M5 25c3 0 3-2.2 6-2.2s3 2.2 6 2.2 3-2.2 6-2.2 3 2.2 6 2.2 3-2.2 4-2.2" fill="none" stroke="#0EA5E9" stroke-width="2.4" stroke-linecap="round"/>
-          <path d="M5 30.5c3 0 3-2.2 6-2.2s3 2.2 6 2.2 3-2.2 6-2.2 3 2.2 6 2.2 3-2.2 4-2.2" fill="none" stroke="#F8FAFC" stroke-width="2" stroke-linecap="round" opacity=".65"/>
-        </svg>
+        {{- with resources.Get "images/logo.png" }}
+        {{- $m := .Resize "88x webp q85 Lanczos" }}
+        <img src="{{ $m.RelPermalink }}" width="40" height="41" alt="{{ site.Params.brand }} logo" loading="lazy" decoding="async">
+        {{- end }}
         <span><strong>Akdeniz Dalgıçlık</strong></span>
       </div>
       <p class="footer-tagline">{{ site.Params.tagline }}</p>
