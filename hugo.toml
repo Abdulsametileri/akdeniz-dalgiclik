@@ -28,13 +28,16 @@ disableKinds = ['taxonomy', 'term', 'rss']
 # ─────────────────────────────────────────────────────────────
 [params]
   brand = 'Akdeniz Dalgıçlık'
-  tagline = 'Sanayi Dalgıcı & Sualtı Bakım-Onarım Hizmetleri'
-  description = 'Akdeniz Dalgıçlık; tekne/yat altı bakımı, sualtı kaynak-kesim, otel plajı kum basma, iskele temizliği, arama-kurtarma ve endüstriyel dalgıçlık.'
+  tagline = 'Sanayi Dalgıçlığı & Sualtı Hizmetleri'
+  description = 'Akdeniz Dalgıçlık; tekne/yat altı bakımı, sualtı kaynak-kesim, otel plajı kıyı düzenleme, iskele temizliği, arama-kurtarma ve endüstriyel dalgıçlık.'
   region = 'Antalya ve Akdeniz Bölgesi'
 
   # phoneDisplay: ekranda görünen format. phoneDial: tel: linki (sadece rakam, +90).
   phoneDisplay = '+90 533 168 18 47'
   phoneDial = '+905331681847'
+  # İkincil telefon hattı (footer iletişim bölümünde gösterilir).
+  phoneDisplay2 = '+90 539 559 48 21'
+  phoneDial2 = '+905395594821'
 
   # WhatsApp — wa.me için ülke kodlu rakam (başında + YOK, boşluk YOK).
   # whatsappNumber  = birincil hat → TÜM CTA butonları (sabit buton, hero, header, footer, CTA, hizmetler) bunu kullanır.

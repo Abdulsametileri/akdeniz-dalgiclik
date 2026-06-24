@@ -1,20 +1,33 @@
 {{- $wa := partial "wa-url.html" . -}}
 <section class="hero">
   <div class="hero-media">
-    {{ partial "img.html" (dict "src" "sualti-kaynak-kesim-02.jpg" "alt" "Sanayi dalgıcının sualtında kaynak ve kesim çalışması" "sizes" "100vw" "loading" "eager" "priority" true "class" "hero-img") }}
+    {{- /* Hero: kaynak görseli düşük çözünürlüklü (1206px) — geniş ekranda tarayıcı
+           upscale'i yumuşatıyor. Hugo tarafında Lanczos ile büyütüp unsharp mask
+           uyguluyoruz; tarayıcı upscale'i yerine net kenarlı varyant servis edilir. */ -}}
+    {{- with resources.Get "images/sualti-kaynak-kesim-02.jpg" -}}
+      {{- $img := . -}}
+      {{- $sharpen := images.UnsharpMask 1.4 0.7 0.0 -}}
+      {{- $srcset := slice -}}
+      {{- range $w := (slice 640 960 1280 1600 1920) -}}
+        {{- $v := ($img.Resize (printf "%dx webp q88 Lanczos" $w)).Filter $sharpen -}}
+        {{- $srcset = $srcset | append (printf "%s %dw" $v.RelPermalink $w) -}}
+      {{- end -}}
+      {{- $base := ($img.Resize "1600x webp q88 Lanczos").Filter $sharpen -}}
+      <img class="hero-img" src="{{ $base.RelPermalink }}" srcset="{{ delimit $srcset ", " }}" sizes="100vw" width="{{ $base.Width }}" height="{{ $base.Height }}" alt="Sanayi dalgıcının sualtında kaynak ve kesim çalışması" loading="eager" decoding="async" fetchpriority="high">
+    {{- end -}}
     <span class="hero-overlay" aria-hidden="true"></span>
   </div>
   <div class="container hero-content">
     <p class="hero-eyebrow">{{ partial "icon.html" (dict "name" "location" "size" 16) }} {{ site.Params.region }}</p>
     <h1 class="hero-title">Akdeniz Dalgıçlık</h1>
-    <p class="hero-sub">Sanayi Dalgıcı &amp; Sualtı Bakım-Onarım Hizmetleri</p>
-    <p class="hero-desc">Tekne ve yat altı bakımı, sualtı kaynak-kesim, otel plajı kum basma, iskele temizliği ve arama-kurtarma dahil endüstriyel dalgıçlık hizmetleri.</p>
+    <p class="hero-sub">Sanayi Dalgıçlığı &amp; Sualtı Bakım-Onarım Hizmetleri</p>
+    <p class="hero-desc">Tekne ve yat altı bakımı, sualtı kaynak-kesim, otel plajı kıyı düzenleme, iskele temizliği ve arama-kurtarma dahil endüstriyel dalgıçlık hizmetleri.</p>
     <div class="hero-cta">
       <a class="btn btn-wa btn-lg" href="{{ $wa }}" target="_blank" rel="noopener">{{ partial "icon.html" (dict "name" "whatsapp" "size" 20) }} WhatsApp’tan Teklif Al</a>
       <a class="btn btn-ghost btn-lg" href="/galeri/">Yapılan İşleri Gör {{ partial "icon.html" (dict "name" "arrow" "size" 18) }}</a>
     </div>
     <ul class="hero-badges">
-      <li>{{ partial "icon.html" (dict "name" "clipboard" "size" 18) }} 1. Sınıf Sanayi Dalgıcı</li>
+      <li>{{ partial "icon.html" (dict "name" "clipboard" "size" 18) }} Profesyonel Dalgıç</li>
       <li>{{ partial "icon.html" (dict "name" "site" "size" 18) }} Otel · marina · liman</li>
       <li>{{ partial "icon.html" (dict "name" "phone" "size" 18) }} 7/24 hızlı dönüş</li>
     </ul>

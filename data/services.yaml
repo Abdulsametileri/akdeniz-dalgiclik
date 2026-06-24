@@ -33,12 +33,12 @@ services:
       - Sahil genişletme ve form verme
       - Daha geniş güneşlenme ve yüzme alanı oluşturma
       - Deniz içindeki keskin kaya ve taşların kumla kapatılması
-      - Ayak yaralanması riskinin azaltılması
+      - Misafir yaralanması riskinin azaltılması
     reporting: Çalışmanın öncesi ve sonrası fotoğraf/video ile belgelenir.
 
   - id: iskele-su-jeti-temizlik
     icon: anchor
-    title: Yüksek Basınçlı Su Jeti ile İskele Ayakları Temizliği
+    title: İskele Kazık Temizliği
     short: İskelelerinizin ömrünü uzatın; korozyon ve kötü koku riskini azaltın.
     forWhat: İskele ayaklarında biriken midye, kekamoz ve yosun zamanla beton ve metal yapılarda korozyonu tetikler; bu da yapının taşıma kapasitesini ve çevredeki koku düzeyini olumsuz etkiler. Yüksek basınçlı su jetiyle yapıya zarar vermeden derinlemesine temizlik yapıyoruz.
     where:

@@ -6,7 +6,7 @@ lead = 'Sualtı işiniz için keşif veya teklif almak en hızlı yol WhatsApp v
 description = 'Akdeniz Dalgıçlık iletişim: WhatsApp, telefon ve e-posta ile sualtı bakım-onarım hizmetleri için keşif ve teklif alın. Antalya ve Akdeniz Bölgesi.'
 +++
 
-Tekne/yat altı bakımı, sualtı kaynak-kesim, otel plajı kum basma, iskele temizliği,
+Tekne/yat altı bakımı, sualtı kaynak-kesim, otel plajı kıyı düzenleme, iskele temizliği,
 arama-kurtarma veya genel endüstriyel dalgıçlık ihtiyacınız için bize yazabilirsiniz.
 Mesajınızda **çalışma alanını, işin türünü ve saha koşullarını** kısaca paylaşırsanız
 daha net bir değerlendirme yapabiliriz.
