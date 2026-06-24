@@ -51,7 +51,7 @@ disableKinds = ['taxonomy', 'term', 'rss']
   whatsappMessage = 'Merhaba, sualtı işim için keşif / teklif almak istiyorum.'
 
   # Open Graph / sosyal paylaşım görseli kaynağı (assets/images altında)
-  ogImage = 'sualti-kaynak-kesim-01.jpg'
+  ogImage = 'sualti-kaynak-kesim-02.jpg'
 
 # ─────────────────────────────────────────────────────────────
 # Menü
