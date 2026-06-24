@@ -8,7 +8,7 @@
       <h2 class="section-title light">Saha tecrübesi, görünür sonuç</h2>
       <p class="section-lead light">Abartısız ve net bir çalışma anlayışı: işten önce keşif, iş sırasında dikkat, iş sonrası görsel kayıt. İhtiyaca ve saha koşullarına göre değerlendirme yapılır.</p>
       <ul class="trust-list">
-        {{- range hugo.Data.trust.items }}
+        {{- range site.Data.trust.items }}
         <li>
           <span class="trust-ic">{{ partial "icon.html" (dict "name" .icon "size" 22) }}</span>
           <div><h3>{{ .title }}</h3><p>{{ .text }}</p></div>

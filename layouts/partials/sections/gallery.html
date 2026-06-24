@@ -1,5 +1,5 @@
 {{- /* Galeri + JS'siz :target lightbox. Param: dict "limit" N (0/boş = tümü) */ -}}
-{{- $items := hugo.Data.gallery.items -}}
+{{- $items := site.Data.gallery.items -}}
 {{- with .limit }}{{ $items = first . $items }}{{ end -}}
 <section class="section" id="galeri">
   <div class="container">

@@ -6,7 +6,7 @@
       <p class="section-lead">Liman, iskele, gemi ve endüstriyel tesislerde sualtı kontrol, bakım ve onarım çalışmaları; her aşaması görsel olarak kayıt altına alınır.</p>
     </div>
     <div class="cards">
-      {{- range hugo.Data.services.services }}
+      {{- range site.Data.services.services }}
       <article class="card">
         <span class="card-ic">{{ partial "icon.html" (dict "name" .icon "size" 26) }}</span>
         <h3 class="card-title">{{ .title }}</h3>

@@ -6,7 +6,7 @@
       <p class="section-lead">Yapılan çalışmalar fotoğraf ve video ile kayıt altına alınarak iş sonrası değerlendirme ve raporlama süreci desteklenir.</p>
     </div>
     <div class="videos">
-      {{- range hugo.Data.videos.items }}
+      {{- range site.Data.videos.items }}
       {{- $poster := "" }}{{ with resources.Get (printf "images/%s" .poster) }}{{ $poster = (.Resize "1000x jpg q78").RelPermalink }}{{ end -}}
       <figure class="video-card">
         <video class="video-el" controls preload="none" playsinline poster="{{ $poster }}" width="{{ .w }}" height="{{ .h }}">

@@ -4,7 +4,7 @@
 <section class="section">
   <div class="container">
     <div class="services-detail">
-      {{- range hugo.Data.services.services }}
+      {{- range site.Data.services.services }}
       <article class="svc" id="{{ .id }}">
         <div class="svc-head">
           <span class="card-ic">{{ partial "icon.html" (dict "name" .icon "size" 26) }}</span>

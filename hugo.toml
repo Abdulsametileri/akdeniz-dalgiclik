@@ -1,5 +1,5 @@
 baseURL = 'https://akdenizdalgiclik.com/'
-locale = 'tr-TR'
+languageCode = 'tr-tr'
 defaultContentLanguage = 'tr'
 title = 'Akdeniz Dalgıçlık'
 enableRobotsTXT = true

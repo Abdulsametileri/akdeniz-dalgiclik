@@ -1,0 +1,13 @@
+# Hugo
+/public/
+/resources/
+.hugo_build.lock
+
+# Kaynak medya & referans (repoya girmesin — büyük dosyalar)
+/docs/
+prompt.txt
+
+# OS / editor
+.DS_Store
+Thumbs.db
+node_modules/
