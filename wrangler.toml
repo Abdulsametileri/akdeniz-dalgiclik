@@ -1,0 +1,8 @@
+# Cloudflare Workers — statik site (assets-only Worker).
+# Hugo `public/` çıktısını statik asset olarak servis eder.
+# name, dashboard'daki mevcut Worker adıyla AYNI olmalı (custom domain ona bağlı).
+name = "akdeniz-dalgiclik"
+compatibility_date = "2025-06-24"
+
+[assets]
+directory = "./public"
