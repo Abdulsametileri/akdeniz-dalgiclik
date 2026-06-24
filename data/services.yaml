@@ -1,72 +1,71 @@
 # Hizmetler — tek kaynak. Ana sayfa kartları ve Hizmetler sayfası bu dosyadan üretilir.
 # icon: layouts/partials/icon.html içindeki anahtarla eşleşir.
 services:
-  - id: sualti-kontrol
-    icon: search
-    title: Sualtı Kontrol ve Keşif
-    short: Gemi, iskele, liman ve endüstriyel tesislerde sualtı durum tespiti ve görsel raporlama.
-    forWhat: Çalışmaya başlamadan önce sualtı yapılarının mevcut durumunu görmek, hasar ve aşınmaları tespit etmek ve iş kapsamını netleştirmek için yapılır.
-    where:
-      - İskele ve liman ayakları
-      - Gemi gövdesi ve bağlantı noktaları
-      - Boru hattı ve deniz deşarj yapıları
-      - Endüstriyel tesis su giriş/çıkış noktaları
-    reporting: Kontrol sırasında çekilen fotoğraf ve videolar ile durum kayıt altına alınır.
-
-  - id: sualti-bakim-onarim
-    icon: wrench
-    title: Sualtı Bakım ve Onarım
-    short: Saha ihtiyacına göre bakım, temizlik, montaj ve onarım çalışmalarına yönelik dalış hizmetleri.
-    forWhat: Sualtında kalan yapı ve ekipmanların işlevini sürdürmesi için bakım, temizlik ve onarım çalışmalarına dalış desteği sağlar.
-    where:
-      - İskele ve liman altyapısı
-      - Deniz suyu hatları ve ızgaralar
-      - Sualtı montaj ve sökme işleri
-      - Birikinti ve canlı tutunması temizliği
-    reporting: Yapılan çalışmanın öncesi ve sonrası fotoğraf/video ile belgelenir.
-
-  - id: gemi-govde-kontrolu
+  - id: tekne-yat-bakim
     icon: ship
-    title: Gemi Gövde Kontrolü
-    short: Gemi gövdesi, pervane, dümen ve bağlantı noktalarında sualtı kontrol çalışmaları.
-    forWhat: Geminin sualtında kalan bölümlerinin gözle kontrolü, kirlilik ve hasar tespiti ile durum değerlendirmesi için yapılır.
+    title: Tekne & Yat Altı Temizliği, Bakım ve Onarım
+    short: Teknenizin performansı ve yakıt tasarrufu sualtındaki temizlikle başlar.
+    forWhat: Zamanla tekne karinasında, şaft ve pervanesinde oluşan kirlenmeler hızı düşürür ve yakıt tüketimini artırır. Yat ve teknelerinizi sudan çıkarmaya gerek kalmadan, sualtında bakım ve onarım hizmeti sunuyoruz.
     where:
-      - Gemi gövdesi ve omurga
-      - Pervane ve şaft bölgesi
-      - Dümen ve bağlantı noktaları
-      - Deniz suyu giriş ızgaraları
-    reporting: Kontrol bulguları fotoğraf ve video ile kayıt altına alınarak paylaşılır.
+      - Karina ve sürtünme yüzeylerinin temizliği
+      - Pervane, şaft ve yalpa çemberi bakımı
+      - Pervane kontrolü, mikro çatlak taraması ve onarımı
+      - Kinistin, ızgara ve su almalarının temizliği
+    reporting: Çalışmanın öncesi ve sonrası fotoğraf/video ile belgelenir.
 
-  - id: liman-iskele
-    icon: anchor
-    title: Liman ve İskele İşleri
-    short: İskele ayakları, bağlantı noktaları, boru hatları ve liman altyapısına yönelik sualtı çalışmalar.
-    forWhat: Liman ve iskele yapılarının sualtında kalan bölümlerinde kontrol, bakım ve destek çalışmaları için yapılır.
-    where:
-      - İskele kazıkları ve ayakları
-      - Bağlantı ve mesnet noktaları
-      - Sualtı boru hatları
-      - Liman zemini ve çevresi
-    reporting: Saha çalışması fotoğraf/video ile belgelenerek iş sonrası değerlendirme desteklenir.
-
-  - id: sualti-kesim-kaynak
+  - id: sualti-kaynak-o2-kesim
     icon: spark
-    title: Sualtı Kesim / Kaynak
-    short: Saha koşullarına ve iş güvenliği gereksinimlerine göre sualtı kesim ve kaynak desteği.
-    forWhat: Su altındaki metal yapılarda, saha koşulları ve iş güvenliği gereksinimleri uygun olduğunda kesim ve kaynak çalışmaları için destek sağlar.
+    title: Sualtı Kaynak ve O2 (Oksijen) Kesim İşlemleri
+    short: Suyun altında milimetrik endüstriyel işçilik.
+    forWhat: Sualtı yapıları, iskeleler ve deniz deşarj hatlarındaki hasar veya modifikasyon ihtiyaçları için sualtı kaynak ve kesim hizmeti sunuyoruz. 1. Sınıf Sanayi Dalgıcı yetkinliğiyle zorlu metal işleme operasyonlarını güvenle yönetiyoruz.
     where:
-      - Metal konstrüksiyon ve profiller
-      - İskele ve liman çelik elemanları
+      - Kullanım dışı, tehlike arz eden eski iskele ve demir parçalarının O2 kesimiyle sökülmesi
+      - Aşınmış veya hasarlı sualtı metal yapıların sualtı kaynağıyla güçlendirilmesi ve onarımı
       - Sualtı sökme ve birleştirme işleri
     reporting: Çalışma öncesi keşif yapılır, süreç fotoğraf/video ile kayıt altına alınır.
 
-  - id: foto-video-raporlama
-    icon: camera
-    title: Fotoğraf ve Video Raporlama
-    short: Yapılan çalışmaların öncesi, süreci ve sonrası için fotoğraf/video kayıt ve raporlama desteği.
-    forWhat: İş öncesi durumun, çalışma sürecinin ve sonucun görsel olarak kayıt altına alınması ve değerlendirilebilmesi için yapılır.
+  - id: otel-plaji-kum-basma
+    icon: site
+    title: Otel Plajları İçin Kum Basma ve Sahil Genişletme
+    short: Taşlık sahilleri düzgün ve konforlu kum plajlara dönüştürüyoruz.
+    forWhat: Özellikle taşlık ve kayalık sahillerde misafir konforu ve güvenliği önceliklidir. Yüksek kapasiteli kum pompalarımız ve sualtı ekibimizle deniz tabanındaki istenmeyen taş ve kayaları deniz kumuyla kaplıyoruz.
     where:
-      - Sualtı kontrol ve keşif çalışmaları
-      - Bakım, onarım ve temizlik işleri
-      - Gemi ve liman saha çalışmaları
-    reporting: Yapılan çalışmalar fotoğraf ve video ile kayıt altına alınarak iş sonrası değerlendirme ve raporlama süreci desteklenir.
+      - Sahil genişletme ve form verme
+      - Daha geniş güneşlenme ve yüzme alanı oluşturma
+      - Deniz içindeki keskin kaya ve taşların kumla kapatılması
+      - Ayak yaralanması riskinin azaltılması
+    reporting: Çalışmanın öncesi ve sonrası fotoğraf/video ile belgelenir.
+
+  - id: iskele-su-jeti-temizlik
+    icon: anchor
+    title: Yüksek Basınçlı Su Jeti ile İskele Ayakları Temizliği
+    short: İskelelerinizin ömrünü uzatın; korozyon ve kötü koku riskini azaltın.
+    forWhat: İskele ayaklarında biriken midye, kekamoz ve yosun zamanla beton ve metal yapılarda korozyonu tetikler; bu da yapının taşıma kapasitesini ve çevredeki koku düzeyini olumsuz etkiler. Yüksek basınçlı su jetiyle yapıya zarar vermeden derinlemesine temizlik yapıyoruz.
+    where:
+      - Yüksek basınçlı su jetiyle derinlemesine temizlik
+      - Korozyonu önleyerek yapı ömrünü uzatma
+      - Keskin midye kabuklarından kaynaklı yaralanma riskini azaltma
+      - Kıyıya vuran kötü kokuların önlenmesi
+    reporting: Çalışmanın öncesi ve sonrası fotoğraf/video ile belgelenir.
+
+  - id: arama-kurtarma
+    icon: search
+    title: Profesyonel Arama & Kurtarma Operasyonları
+    short: Suyun altında kaybolan eşya ve ekipmanlarınız için arama-kurtarma.
+    forWhat: Denize düşen değerli eşyalar, tekne ekipmanları veya endüstriyel parçalar için sualtı arama ve kurtarma operasyonları yürütüyoruz. Görüşün düşük olduğu zorlu şartlarda dahi kayıp nesneleri tespit edip güvenle yüzeye çıkarmayı hedefliyoruz.
+    where:
+      - Telefon, takı, cüzdan gibi değerli eşyalar
+      - Çapa, zincir, bot motoru gibi tekne ekipmanları
+      - Denize düşen endüstriyel parça ve ekipmanlar
+    reporting: Operasyon öncesi durum değerlendirilir, süreç fotoğraf/video ile kayıt altına alınır.
+
+  - id: genel-endustriyel-dalgiclik
+    icon: wrench
+    title: Genel Endüstriyel Dalgıçlık Hizmetleri
+    short: Endüstriyel dalgıçlığa giren sualtı işçilik ve raporlama hizmetleri.
+    forWhat: Endüstriyel dalgıçlık alanına giren sualtı mühendislik ve işçilik ihtiyaçlarınızda profesyonel çözüm ortağınızız.
+    where:
+      - Deniz deşarj hatları bakım-onarımı
+      - Sualtı video ve fotoğraf raporlama (sörvey)
+      - Şamandıra ve tonoz sistemleri kurulumu ve bakımı
+    reporting: Yapılan çalışmalar fotoğraf ve video ile kayıt altına alınarak raporlanır.

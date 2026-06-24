@@ -1,17 +1,17 @@
 # "Neden Akdeniz Dalgıçlık?" güven unsurları. Abartısız, doğrulanabilir ifadeler.
 items:
-  - icon: site
-    title: Saha Tecrübesi
-    text: Liman, iskele, gemi ve endüstriyel tesislerde yürütülen sualtı saha çalışmaları.
-
-  - icon: camera
-    title: Görsel Raporlama
-    text: Yapılan işler fotoğraf ve video ile kayıt altına alınarak iş öncesi/sonrası değerlendirme desteklenir.
-
-  - icon: chat
-    title: Hızlı İletişim
-    text: WhatsApp ve telefon üzerinden hızlı ulaşım, ihtiyaç ve saha koşullarına göre net geri dönüş.
-
   - icon: clipboard
-    title: İş Öncesi Keşif
-    text: Çalışmaya başlamadan önce sualtı durumunun değerlendirilmesi ve iş kapsamının netleştirilmesi.
+    title: 1. Sınıf Sanayi Dalgıcı Ehliyeti
+    text: Operasyonlar 1. Sınıf Sanayi Dalgıcı yetkinliğiyle, ilgili mevzuata uygun şekilde yürütülür.
+
+  - icon: wrench
+    title: Tam Donanımlı Ekipman
+    text: Yüksek basınçlı su jetleri, güçlü kum pompaları ve sualtı kaynak makineleriyle saha çalışması.
+
+  - icon: anchor
+    title: Turizm & Marina Odaklı Yaklaşım
+    text: Otel misafir konforunu ve marina operasyon hızını gözeten esnek çalışma saatleri.
+
+  - icon: phone
+    title: 7/24 Acil Müdahale
+    text: İhtiyaç anında Antalya ve çevre bölgelerde hızla sahada yer alma.

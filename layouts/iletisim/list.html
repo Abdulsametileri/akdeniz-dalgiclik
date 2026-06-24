@@ -1,5 +1,7 @@
 {{ define "main" }}
 {{- $wa := partial "wa-url.html" . -}}
+{{- $msg := site.Params.whatsappMessage | urlquery | replaceRE `\+` "%20" -}}
+{{- $wa2 := printf "https://wa.me/%s?text=%s" site.Params.whatsappNumber2 $msg -}}
 {{ partial "page-hero.html" . }}
 <section class="section">
   <div class="container">
@@ -7,7 +9,12 @@
       <a class="contact-card" href="{{ $wa }}" target="_blank" rel="noopener">
         <span class="contact-ic contact-ic-wa">{{ partial "icon.html" (dict "name" "whatsapp" "size" 24) }}</span>
         <span class="contact-k">WhatsApp</span>
-        <span class="contact-v">Mesaj gönderin, hızlıca dönelim</span>
+        <span class="contact-v">{{ site.Params.whatsappDisplay }}</span>
+      </a>
+      <a class="contact-card" href="{{ $wa2 }}" target="_blank" rel="noopener">
+        <span class="contact-ic contact-ic-wa">{{ partial "icon.html" (dict "name" "whatsapp" "size" 24) }}</span>
+        <span class="contact-k">WhatsApp</span>
+        <span class="contact-v">{{ site.Params.whatsappDisplay2 }}</span>
       </a>
       <a class="contact-card" href="tel:{{ site.Params.phoneDial }}">
         <span class="contact-ic">{{ partial "icon.html" (dict "name" "phone" "size" 24) }}</span>

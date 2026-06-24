@@ -41,15 +41,19 @@ statik servis eder. Bağlantı: `wrangler.toml` (repo kökünde, `name` Worker a
 - `data/trust.yaml` → “Neden biz?” güven unsurları.
 - `content/*/_index.md` → sayfa başlığı, SEO `description`, `lead`, opsiyonel `ogImage`.
 
-## ⚠️ BEKLEYEN PLACEHOLDER’LAR — `hugo.toml [params]`
-Gerçek değerler gelince **sadece burayı** güncelle (tüm site otomatik günceller):
-- `phoneDisplay` / `phoneDial` — gerçek telefon
-- `whatsappNumber` — `905XXXXXXXXX` (ülke kodlu, **+ ve boşluk yok**)
-- `email` — gerçek e-posta
-- `region` — şu an "Antalya ve Akdeniz Bölgesi"
+## İletişim bilgileri — `hugo.toml [params]` (TEK KAYNAK, GERÇEK)
+İletişimi değiştirmek için **sadece burayı** güncelle (tüm site otomatik günceller):
+- `phoneDisplay` / `phoneDial` — `+90 533 168 18 47` (1. hat = telefon).
+- `whatsappNumber` — `905331681847` (1. hat). **TÜM CTA butonları** (sabit buton, hero,
+  header, footer, CTA, hizmetler) bunu kullanır.
+- `whatsappNumber2` — `905395594821` (2. hat). **Yalnız İletişim sayfasında** ikinci
+  WhatsApp kartı (`layouts/iletisim/list.html` içinde `$wa2`); başka yerde kullanılmaz.
+- `whatsappDisplay` / `whatsappDisplay2` — İletişim kartlarında görünen okunabilir format.
+- `email` — `fatihsultanmutlu@gmail.com` (Fatih Sultan Mutlu).
+- `region` — "Antalya ve Akdeniz Bölgesi".
 
-> Not: referans sitedeki numara (+905395594821) **başka kişiye** (Muhammed Gazi Vural) ait,
-> kullanılmadı. Şu an CTA’lar placeholder’a gider.
+> Not: `905395594821` daha önce başka kişiye (Muhammed Gazi Vural) atfedilmişti; kullanıcı
+> 2026-06-24'te bu numarayı ikincil WhatsApp hattı olarak **bilinçli onayladı**.
 
 ## Medya kuralları & kararlar
 - Kaynak medya `docs/` içinde ve **`.gitignore`’da** (repoya girmez). `prompt.txt`, `public/`,

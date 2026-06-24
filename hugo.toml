@@ -29,16 +29,23 @@ disableKinds = ['taxonomy', 'term', 'rss']
 [params]
   brand = 'Akdeniz Dalgıçlık'
   tagline = 'Sanayi Dalgıcı & Sualtı Bakım-Onarım Hizmetleri'
-  description = 'Akdeniz Dalgıçlık; liman, iskele, gemi ve endüstriyel tesislerde sualtı kontrol, bakım, onarım ve fotoğraf/video raporlama hizmetleri sunar.'
+  description = 'Akdeniz Dalgıçlık; tekne/yat altı bakımı, sualtı kaynak-kesim, otel plajı kum basma, iskele temizliği, arama-kurtarma ve endüstriyel dalgıçlık.'
   region = 'Antalya ve Akdeniz Bölgesi'
 
-  # PLACEHOLDER — gerçek bilgilerle değiştirin.
   # phoneDisplay: ekranda görünen format. phoneDial: tel: linki (sadece rakam, +90).
-  # whatsappNumber: wa.me için ülke kodlu rakam (başında + YOK, boşluk YOK).
-  phoneDisplay = '+90 5XX XXX XX XX'
-  phoneDial = '+905000000000'
-  whatsappNumber = '905000000000'
-  email = 'info@akdenizdalgiclik.com'
+  phoneDisplay = '+90 533 168 18 47'
+  phoneDial = '+905331681847'
+
+  # WhatsApp — wa.me için ülke kodlu rakam (başında + YOK, boşluk YOK).
+  # whatsappNumber  = birincil hat → TÜM CTA butonları (sabit buton, hero, header, footer, CTA, hizmetler) bunu kullanır.
+  # whatsappNumber2 = ikincil hat → yalnız İletişim sayfasında ikinci kart.
+  # whatsappDisplay* = İletişim kartlarında görünen okunabilir format.
+  whatsappNumber = '905331681847'
+  whatsappDisplay = '+90 533 168 18 47'
+  whatsappNumber2 = '905395594821'
+  whatsappDisplay2 = '+90 539 559 48 21'
+
+  email = 'fatihsultanmutlu@gmail.com'
 
   # WhatsApp'a tıklanınca önceden dolacak mesaj
   whatsappMessage = 'Merhaba, sualtı işim için keşif / teklif almak istiyorum.'

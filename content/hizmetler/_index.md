@@ -1,6 +1,6 @@
 +++
 title = 'Hizmetler'
 eyebrow = 'Ne yapıyoruz?'
-lead = 'Sualtı kontrol ve keşiften bakım, onarım, gemi gövde kontrolü, liman/iskele işleri ve kaynak/kesim desteğine kadar saha odaklı sualtı hizmetleri.'
-description = 'Akdeniz Dalgıçlık hizmetleri: sualtı kontrol, keşif, bakım-onarım, gemi gövde kontrolü, liman/iskele işleri, sualtı kesim/kaynak ve video raporlama.'
+lead = 'Tekne ve yat altı bakımından sualtı kaynak-kesime, otel plajı kum basmadan iskele temizliği ve arama-kurtarmaya kadar saha odaklı sualtı hizmetleri.'
+description = 'Akdeniz Dalgıçlık hizmetleri: tekne/yat altı bakım, sualtı kaynak-kesim, otel plajı kum basma, su jetiyle iskele temizliği ve arama-kurtarma.'
 +++
