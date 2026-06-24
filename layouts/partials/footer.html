@@ -1,0 +1,42 @@
+{{- $wa := partial "wa-url.html" . -}}
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <svg viewBox="0 0 40 40" width="34" height="34" aria-hidden="true">
+          <rect width="40" height="40" rx="10" fill="#0B3A53"/>
+          <circle cx="27.5" cy="12.5" r="3.8" fill="#F97316"/>
+          <path d="M5 25c3 0 3-2.2 6-2.2s3 2.2 6 2.2 3-2.2 6-2.2 3 2.2 6 2.2 3-2.2 4-2.2" fill="none" stroke="#0EA5E9" stroke-width="2.4" stroke-linecap="round"/>
+          <path d="M5 30.5c3 0 3-2.2 6-2.2s3 2.2 6 2.2 3-2.2 6-2.2 3 2.2 6 2.2 3-2.2 4-2.2" fill="none" stroke="#F8FAFC" stroke-width="2" stroke-linecap="round" opacity=".65"/>
+        </svg>
+        <span><strong>Akdeniz Dalgıçlık</strong></span>
+      </div>
+      <p class="footer-tagline">{{ site.Params.tagline }}</p>
+      <p class="footer-region">{{ partial "icon.html" (dict "name" "location" "size" 16) }} {{ site.Params.region }}</p>
+    </div>
+
+    <div class="footer-col">
+      <h2 class="footer-h">İletişim</h2>
+      <ul class="footer-links">
+        <li><a href="tel:{{ site.Params.phoneDial }}">{{ partial "icon.html" (dict "name" "phone" "size" 16) }} {{ site.Params.phoneDisplay }}</a></li>
+        <li><a href="{{ $wa }}" target="_blank" rel="noopener">{{ partial "icon.html" (dict "name" "whatsapp" "size" 16) }} WhatsApp</a></li>
+        <li><a href="mailto:{{ site.Params.email }}">{{ partial "icon.html" (dict "name" "mail" "size" 16) }} {{ site.Params.email }}</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h2 class="footer-h">Sayfalar</h2>
+      <ul class="footer-links">
+        {{- range site.Menus.main }}
+        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{- end }}
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <span>&copy; {{ now.Year }} {{ site.Params.brand }}</span>
+      <span class="footer-note">Sanayi Dalgıcı &amp; Sualtı Bakım-Onarım Hizmetleri</span>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,20 @@
+<section class="section section-dark">
+  <div class="container trust-grid">
+    <div class="trust-media">
+      {{ partial "img.html" (dict "src" "dalgic-donanim-portre-02.jpg" "alt" "Sualtı kaskı ve donanımıyla sanayi dalgıcı" "sizes" "(min-width:900px) 40vw, 100vw" "class" "trust-img") }}
+    </div>
+    <div class="trust-body">
+      <p class="eyebrow eyebrow-light">Neden Akdeniz Dalgıçlık?</p>
+      <h2 class="section-title light">Saha tecrübesi, görünür sonuç</h2>
+      <p class="section-lead light">Abartısız ve net bir çalışma anlayışı: işten önce keşif, iş sırasında dikkat, iş sonrası görsel kayıt. İhtiyaca ve saha koşullarına göre değerlendirme yapılır.</p>
+      <ul class="trust-list">
+        {{- range hugo.Data.trust.items }}
+        <li>
+          <span class="trust-ic">{{ partial "icon.html" (dict "name" .icon "size" 22) }}</span>
+          <div><h3>{{ .title }}</h3><p>{{ .text }}</p></div>
+        </li>
+        {{- end }}
+      </ul>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,19 @@
+<section class="section" id="hizmetler">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Hizmetler</p>
+      <h2 class="section-title">Sualtı Hizmetlerimiz</h2>
+      <p class="section-lead">Liman, iskele, gemi ve endüstriyel tesislerde sualtı kontrol, bakım ve onarım çalışmaları; her aşaması görsel olarak kayıt altına alınır.</p>
+    </div>
+    <div class="cards">
+      {{- range hugo.Data.services.services }}
+      <article class="card">
+        <span class="card-ic">{{ partial "icon.html" (dict "name" .icon "size" 26) }}</span>
+        <h3 class="card-title">{{ .title }}</h3>
+        <p class="card-text">{{ .short }}</p>
+        <a class="card-link" href="/hizmetler/#{{ .id }}">Detay {{ partial "icon.html" (dict "name" "arrow" "size" 16) }}</a>
+      </article>
+      {{- end }}
+    </div>
+  </div>
+</section>

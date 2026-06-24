@@ -1,3 +1,79 @@
-baseURL = 'https://example.org/'
-locale = 'en-us'
-title = 'My New Hugo Project'
+baseURL = 'https://akdenizdalgiclik.com/'
+locale = 'tr-TR'
+defaultContentLanguage = 'tr'
+title = 'Akdeniz Dalgıçlık'
+enableRobotsTXT = true
+enableGitInfo = false
+
+# Boş/ince taksonomi sayfaları üretilmesin (SEO temizliği)
+disableKinds = ['taxonomy', 'term', 'rss']
+
+# Build hygiene
+[build]
+  writeStats = false
+
+[minify]
+  minifyOutput = true
+
+# Image processing defaults (Hugo extended)
+[imaging]
+  quality = 80
+  resampleFilter = 'Lanczos'
+  [imaging.exif]
+    disableDate = true
+    disableLatLong = true
+
+# ─────────────────────────────────────────────────────────────
+# Site parameters — TEK KAYNAK. İletişim bilgilerini buradan düzenleyin.
+# ─────────────────────────────────────────────────────────────
+[params]
+  brand = 'Akdeniz Dalgıçlık'
+  tagline = 'Sanayi Dalgıcı & Sualtı Bakım-Onarım Hizmetleri'
+  description = 'Akdeniz Dalgıçlık; liman, iskele, gemi ve endüstriyel tesislerde sualtı kontrol, bakım, onarım ve fotoğraf/video raporlama hizmetleri sunar.'
+  region = 'Antalya ve Akdeniz Bölgesi'
+
+  # PLACEHOLDER — gerçek bilgilerle değiştirin.
+  # phoneDisplay: ekranda görünen format. phoneDial: tel: linki (sadece rakam, +90).
+  # whatsappNumber: wa.me için ülke kodlu rakam (başında + YOK, boşluk YOK).
+  phoneDisplay = '+90 5XX XXX XX XX'
+  phoneDial = '+905000000000'
+  whatsappNumber = '905000000000'
+  email = 'info@akdenizdalgiclik.com'
+
+  # WhatsApp'a tıklanınca önceden dolacak mesaj
+  whatsappMessage = 'Merhaba, sualtı işim için keşif / teklif almak istiyorum.'
+
+  # Open Graph / sosyal paylaşım görseli kaynağı (assets/images altında)
+  ogImage = 'sualti-kaynak-kesim-01.jpg'
+
+# ─────────────────────────────────────────────────────────────
+# Menü
+# ─────────────────────────────────────────────────────────────
+[menus]
+  [[menus.main]]
+    name = 'Ana Sayfa'
+    pageRef = '/'
+    weight = 10
+  [[menus.main]]
+    name = 'Hizmetler'
+    pageRef = '/hizmetler'
+    weight = 20
+  [[menus.main]]
+    name = 'Galeri'
+    pageRef = '/galeri'
+    weight = 30
+  [[menus.main]]
+    name = 'İletişim'
+    pageRef = '/iletisim'
+    weight = 40
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.highlight]
+    noClasses = true
+
+[sitemap]
+  changefreq = 'monthly'
+  priority = 0.5
+  filename = 'sitemap.xml'

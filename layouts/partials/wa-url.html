@@ -1,0 +1,3 @@
+{{- /* WhatsApp tıklanabilir URL — önceden dolu mesajla. Boşluklar %20 ile kodlanır. */ -}}
+{{- $msg := site.Params.whatsappMessage | urlquery | replaceRE `\+` "%20" -}}
+{{- printf "https://wa.me/%s?text=%s" site.Params.whatsappNumber $msg -}}

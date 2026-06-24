@@ -1,0 +1,36 @@
+{{- /* Galeri + JS'siz :target lightbox. Param: dict "limit" N (0/boş = tümü) */ -}}
+{{- $items := hugo.Data.gallery.items -}}
+{{- with .limit }}{{ $items = first . $items }}{{ end -}}
+<section class="section" id="galeri">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Galeri</p>
+      <h2 class="section-title">Yapılan İşler</h2>
+      <p class="section-lead">Saha çalışmalarından kareler. Görseller iş türünü temsil eder; her çalışma kendi koşullarına göre değerlendirilir.</p>
+    </div>
+    <div class="gallery">
+      {{- range $i, $it := $items }}
+      <figure class="gal-item">
+        <a class="gal-link" href="#lb-{{ $i }}" aria-label="{{ $it.title }} — büyüt"{{ with $it.objpos }} style="--pos:{{ . }}"{{ end }}>
+          {{ partial "img.html" (dict "src" $it.file "alt" $it.alt "sizes" "(min-width:900px) 33vw, (min-width:560px) 50vw, 100vw" "class" "gal-img") }}
+          <figcaption class="gal-cap">
+            <span class="gal-cap-t">{{ $it.title }}</span>
+            <span class="gal-cap-d">{{ $it.caption }}</span>
+          </figcaption>
+        </a>
+      </figure>
+      {{- end }}
+    </div>
+  </div>
+
+  {{- range $i, $it := $items }}
+  <div class="lightbox" id="lb-{{ $i }}" role="dialog" aria-modal="true" aria-label="{{ $it.title }}">
+    <a class="lightbox-back" href="#galeri" aria-label="Kapat"></a>
+    <div class="lightbox-inner">
+      <a class="lightbox-close" href="#galeri" aria-label="Kapat">{{ partial "icon.html" (dict "name" "close" "size" 22) }}</a>
+      {{ partial "img.html" (dict "src" $it.file "alt" $it.alt "sizes" "92vw" "class" "lightbox-img") }}
+      <p class="lightbox-cap"><strong>{{ $it.title }}</strong> — {{ $it.caption }}</p>
+    </div>
+  </div>
+  {{- end }}
+</section>

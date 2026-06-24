@@ -1,0 +1,29 @@
+{{- /*
+  Responsive WebP görsel. assets/images altındaki dosyayı işler.
+  Kullanım:
+  {{ partial "img.html" (dict "src" "foo.jpg" "alt" "..." "sizes" "(min-width:800px) 33vw, 100vw" "class" "x" "loading" "eager" "priority" true) }}
+*/ -}}
+{{- $src := .src -}}
+{{- $alt := .alt | default "" -}}
+{{- $class := .class -}}
+{{- $sizes := .sizes | default "100vw" -}}
+{{- $loading := .loading | default "lazy" -}}
+{{- $priority := .priority | default false -}}
+{{- $res := resources.Get (printf "images/%s" $src) -}}
+{{- with $res -}}
+  {{- $maxw := 1600 -}}
+  {{- $widths := slice 400 640 960 1280 1600 -}}
+  {{- $srcset := slice -}}
+  {{- range $w := $widths -}}
+    {{- if le $w $res.Width -}}
+      {{- $v := $res.Resize (printf "%dx webp q80 Lanczos" $w) -}}
+      {{- $srcset = $srcset | append (printf "%s %dw" $v.RelPermalink $w) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $bw := math.Min $maxw $res.Width -}}
+  {{- $base := $res.Resize (printf "%dx webp q80 Lanczos" (int $bw)) -}}
+  {{- if eq (len $srcset) 0 -}}{{- $srcset = $srcset | append (printf "%s %dw" $base.RelPermalink $base.Width) -}}{{- end -}}
+  <img src="{{ $base.RelPermalink }}" srcset="{{ delimit $srcset ", " }}" sizes="{{ $sizes }}" width="{{ $base.Width }}" height="{{ $base.Height }}" alt="{{ $alt }}" loading="{{ $loading }}" decoding="async"{{ if $priority }} fetchpriority="high"{{ end }}{{ with $class }} class="{{ . }}"{{ end }}>
+{{- else -}}
+  <!-- img bulunamadı: {{ $src }} -->
+{{- end -}}

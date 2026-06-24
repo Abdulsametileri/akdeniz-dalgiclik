@@ -1,0 +1,12 @@
+{
+  "name": "Akdeniz Dalgıçlık",
+  "short_name": "Akdeniz Dalgıçlık",
+  "description": "Sanayi Dalgıcı & Sualtı Bakım-Onarım Hizmetleri",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#071827",
+  "theme_color": "#071827",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

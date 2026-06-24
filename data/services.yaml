@@ -1,0 +1,72 @@
+# Hizmetler — tek kaynak. Ana sayfa kartları ve Hizmetler sayfası bu dosyadan üretilir.
+# icon: layouts/partials/icon.html içindeki anahtarla eşleşir.
+services:
+  - id: sualti-kontrol
+    icon: search
+    title: Sualtı Kontrol ve Keşif
+    short: Gemi, iskele, liman ve endüstriyel tesislerde sualtı durum tespiti ve görsel raporlama.
+    forWhat: Çalışmaya başlamadan önce sualtı yapılarının mevcut durumunu görmek, hasar ve aşınmaları tespit etmek ve iş kapsamını netleştirmek için yapılır.
+    where:
+      - İskele ve liman ayakları
+      - Gemi gövdesi ve bağlantı noktaları
+      - Boru hattı ve deniz deşarj yapıları
+      - Endüstriyel tesis su giriş/çıkış noktaları
+    reporting: Kontrol sırasında çekilen fotoğraf ve videolar ile durum kayıt altına alınır.
+
+  - id: sualti-bakim-onarim
+    icon: wrench
+    title: Sualtı Bakım ve Onarım
+    short: Saha ihtiyacına göre bakım, temizlik, montaj ve onarım çalışmalarına yönelik dalış hizmetleri.
+    forWhat: Sualtında kalan yapı ve ekipmanların işlevini sürdürmesi için bakım, temizlik ve onarım çalışmalarına dalış desteği sağlar.
+    where:
+      - İskele ve liman altyapısı
+      - Deniz suyu hatları ve ızgaralar
+      - Sualtı montaj ve sökme işleri
+      - Birikinti ve canlı tutunması temizliği
+    reporting: Yapılan çalışmanın öncesi ve sonrası fotoğraf/video ile belgelenir.
+
+  - id: gemi-govde-kontrolu
+    icon: ship
+    title: Gemi Gövde Kontrolü
+    short: Gemi gövdesi, pervane, dümen ve bağlantı noktalarında sualtı kontrol çalışmaları.
+    forWhat: Geminin sualtında kalan bölümlerinin gözle kontrolü, kirlilik ve hasar tespiti ile durum değerlendirmesi için yapılır.
+    where:
+      - Gemi gövdesi ve omurga
+      - Pervane ve şaft bölgesi
+      - Dümen ve bağlantı noktaları
+      - Deniz suyu giriş ızgaraları
+    reporting: Kontrol bulguları fotoğraf ve video ile kayıt altına alınarak paylaşılır.
+
+  - id: liman-iskele
+    icon: anchor
+    title: Liman ve İskele İşleri
+    short: İskele ayakları, bağlantı noktaları, boru hatları ve liman altyapısına yönelik sualtı çalışmalar.
+    forWhat: Liman ve iskele yapılarının sualtında kalan bölümlerinde kontrol, bakım ve destek çalışmaları için yapılır.
+    where:
+      - İskele kazıkları ve ayakları
+      - Bağlantı ve mesnet noktaları
+      - Sualtı boru hatları
+      - Liman zemini ve çevresi
+    reporting: Saha çalışması fotoğraf/video ile belgelenerek iş sonrası değerlendirme desteklenir.
+
+  - id: sualti-kesim-kaynak
+    icon: spark
+    title: Sualtı Kesim / Kaynak
+    short: Saha koşullarına ve iş güvenliği gereksinimlerine göre sualtı kesim ve kaynak desteği.
+    forWhat: Su altındaki metal yapılarda, saha koşulları ve iş güvenliği gereksinimleri uygun olduğunda kesim ve kaynak çalışmaları için destek sağlar.
+    where:
+      - Metal konstrüksiyon ve profiller
+      - İskele ve liman çelik elemanları
+      - Sualtı sökme ve birleştirme işleri
+    reporting: Çalışma öncesi keşif yapılır, süreç fotoğraf/video ile kayıt altına alınır.
+
+  - id: foto-video-raporlama
+    icon: camera
+    title: Fotoğraf ve Video Raporlama
+    short: Yapılan çalışmaların öncesi, süreci ve sonrası için fotoğraf/video kayıt ve raporlama desteği.
+    forWhat: İş öncesi durumun, çalışma sürecinin ve sonucun görsel olarak kayıt altına alınması ve değerlendirilebilmesi için yapılır.
+    where:
+      - Sualtı kontrol ve keşif çalışmaları
+      - Bakım, onarım ve temizlik işleri
+      - Gemi ve liman saha çalışmaları
+    reporting: Yapılan çalışmalar fotoğraf ve video ile kayıt altına alınarak iş sonrası değerlendirme ve raporlama süreci desteklenir.

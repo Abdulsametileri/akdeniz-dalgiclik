@@ -1,0 +1,24 @@
+<section class="section section-tint" id="videolar">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Video Raporlama</p>
+      <h2 class="section-title">Saha Videoları</h2>
+      <p class="section-lead">Yapılan çalışmalar fotoğraf ve video ile kayıt altına alınarak iş sonrası değerlendirme ve raporlama süreci desteklenir.</p>
+    </div>
+    <div class="videos">
+      {{- range hugo.Data.videos.items }}
+      {{- $poster := "" }}{{ with resources.Get (printf "images/%s" .poster) }}{{ $poster = (.Resize "1000x jpg q78").RelPermalink }}{{ end -}}
+      <figure class="video-card">
+        <video class="video-el" controls preload="none" playsinline poster="{{ $poster }}" width="{{ .w }}" height="{{ .h }}">
+          <source src="{{ .src }}" type="video/mp4">
+          Tarayıcınız bu videoyu oynatamıyor. <a href="{{ .src }}">Videoyu indirin</a>.
+        </video>
+        <figcaption class="video-cap">
+          <strong>{{ .title }}</strong>
+          <span>{{ .caption }}</span>
+        </figcaption>
+      </figure>
+      {{- end }}
+    </div>
+  </div>
+</section>

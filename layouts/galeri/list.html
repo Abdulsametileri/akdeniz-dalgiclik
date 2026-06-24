@@ -1,0 +1,6 @@
+{{ define "main" }}
+{{ partial "page-hero.html" . }}
+{{ partial "sections/gallery.html" (dict "limit" 0) }}
+{{ partial "sections/videos.html" . }}
+{{ partial "sections/cta.html" . }}
+{{ end }}

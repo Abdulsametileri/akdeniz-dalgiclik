@@ -1,0 +1,35 @@
+{{ define "main" }}
+{{- $wa := partial "wa-url.html" . -}}
+{{ partial "page-hero.html" . }}
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+      <a class="contact-card" href="{{ $wa }}" target="_blank" rel="noopener">
+        <span class="contact-ic contact-ic-wa">{{ partial "icon.html" (dict "name" "whatsapp" "size" 24) }}</span>
+        <span class="contact-k">WhatsApp</span>
+        <span class="contact-v">Mesaj gönderin, hızlıca dönelim</span>
+      </a>
+      <a class="contact-card" href="tel:{{ site.Params.phoneDial }}">
+        <span class="contact-ic">{{ partial "icon.html" (dict "name" "phone" "size" 24) }}</span>
+        <span class="contact-k">Telefon</span>
+        <span class="contact-v">{{ site.Params.phoneDisplay }}</span>
+      </a>
+      <a class="contact-card" href="mailto:{{ site.Params.email }}">
+        <span class="contact-ic">{{ partial "icon.html" (dict "name" "mail" "size" 24) }}</span>
+        <span class="contact-k">E-posta</span>
+        <span class="contact-v">{{ site.Params.email }}</span>
+      </a>
+      <div class="contact-card contact-card-static">
+        <span class="contact-ic">{{ partial "icon.html" (dict "name" "location" "size" 24) }}</span>
+        <span class="contact-k">Hizmet Bölgesi</span>
+        <span class="contact-v">{{ site.Params.region }}</span>
+      </div>
+    </div>
+
+    {{- with .Content }}
+    <div class="contact-note prose">{{ . }}</div>
+    {{- end }}
+  </div>
+</section>
+{{ partial "sections/cta.html" . }}
+{{ end }}

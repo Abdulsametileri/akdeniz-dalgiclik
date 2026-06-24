@@ -1,0 +1,7 @@
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow eyebrow-light">{{ .Params.eyebrow | default site.Params.brand }}</p>
+    <h1 class="page-hero-title">{{ .Title }}</h1>
+    {{ with .Params.lead }}<p class="page-hero-lead">{{ . }}</p>{{ end }}
+  </div>
+</section>
