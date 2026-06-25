@@ -29,8 +29,7 @@ disableKinds = ['taxonomy', 'term', 'rss']
 [params]
   brand = 'Akdeniz Dalgıçlık'
   tagline = 'Sanayi Dalgıçlığı & Sualtı Hizmetleri'
-  description = 'Akdeniz Dalgıçlık; tekne/yat altı bakımı, sualtı kaynak-kesim, otel plajı kıyı düzenleme, iskele temizliği, arama-kurtarma ve endüstriyel dalgıçlık.'
-  region = 'Antalya ve Akdeniz Bölgesi'
+  description = 'Akdeniz Dalgıçlık; Tekne/yat/gemi altı temizlik, Sualtı kaynak ve sualtı kesim'
 
   # phoneDisplay: ekranda görünen format. phoneDial: tel: linki (sadece rakam, +90).
   phoneDisplay = '+90 533 168 18 47'
