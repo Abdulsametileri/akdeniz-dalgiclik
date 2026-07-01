@@ -1,0 +1,18 @@
+{{- /*
+  Hizmet ikonu. iconImg varsa illüstrasyon (WebP) basar; yoksa SVG glyph'e düşer.
+  Kullanım: {{ partial "svc-icon.html" (dict "svc" . "size" 64) }}
+*/ -}}
+{{- $svc := .svc -}}
+{{- $size := .size | default 64 -}}
+{{- if $svc.iconImg -}}
+  {{- $res := resources.Get (printf "images/%s" $svc.iconImg) -}}
+  {{- with $res -}}
+    {{- $px := mul $size 2 -}}
+    {{- $img := .Resize (printf "%dx%d webp q82 Lanczos" $px $px) -}}
+    <img class="card-ic card-ic--img" src="{{ $img.RelPermalink }}" width="{{ $size }}" height="{{ $size }}" alt="" loading="lazy" decoding="async" aria-hidden="true">
+  {{- else -}}
+    <span class="card-ic">{{ partial "icon.html" (dict "name" $svc.icon "size" 26) }}</span>
+  {{- end -}}
+{{- else -}}
+  <span class="card-ic">{{ partial "icon.html" (dict "name" $svc.icon "size" 26) }}</span>
+{{- end -}}

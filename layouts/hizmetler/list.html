@@ -7,7 +7,7 @@
       {{- range site.Data.services.services }}
       <article class="svc" id="{{ .id }}">
         <div class="svc-head">
-          <span class="card-ic">{{ partial "icon.html" (dict "name" .icon "size" 26) }}</span>
+          {{ partial "svc-icon.html" (dict "svc" . "size" 56) }}
           <h2 class="svc-title">{{ .title }}</h2>
         </div>
         <p class="svc-short">{{ .short }}</p>

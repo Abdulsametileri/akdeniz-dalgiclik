@@ -3,6 +3,7 @@
 services:
   - id: tekne-yat-bakim
     icon: ship
+    iconImg: svc-tekne-yat.png
     title: Tekne & Yat Altı Temizliği, Bakım ve Onarım
     short: Teknenizin performansı ve yakıt tasarrufu sualtındaki temizlikle başlar.
     forWhat: Zamanla tekne karinasında, şaft ve pervanesinde oluşan kirlenmeler hızı düşürür ve yakıt tüketimini artırır. Yat ve teknelerinizi sudan çıkarmaya gerek kalmadan, sualtında bakım ve onarım hizmeti sunuyoruz.
@@ -15,6 +16,7 @@ services:
 
   - id: sualti-kaynak-o2-kesim
     icon: spark
+    iconImg: svc-sualti-kaynak.png
     title: Sualtı Kaynak ve O2 (Oksijen) Kesim İşlemleri
     short: Suyun altında milimetrik endüstriyel işçilik.
     forWhat: Sualtı yapıları, iskeleler ve deniz deşarj hatlarındaki hasar veya modifikasyon ihtiyaçları için sualtı kaynak ve kesim hizmeti sunuyoruz. 1. Sınıf Sanayi Dalgıcı yetkinliğiyle zorlu metal işleme operasyonlarını güvenle yönetiyoruz.
@@ -26,6 +28,7 @@ services:
 
   - id: otel-plaji-kum-basma
     icon: site
+    iconImg: svc-kum-basma.png
     title: Otel Plajları İçin Kum Basma ve Sahil Genişletme
     short: Taşlık sahilleri düzgün ve konforlu kum plajlara dönüştürüyoruz.
     forWhat: Özellikle taşlık ve kayalık sahillerde misafir konforu ve güvenliği önceliklidir. Yüksek kapasiteli kum pompalarımız ve sualtı ekibimizle deniz tabanındaki istenmeyen taş ve kayaları deniz kumuyla kaplıyoruz.
@@ -38,6 +41,7 @@ services:
 
   - id: iskele-su-jeti-temizlik
     icon: anchor
+    iconImg: svc-iskele-kazik.png
     title: İskele Kazık Temizliği
     short: İskelelerinizin ömrünü uzatın; korozyon ve kötü koku riskini azaltın.
     forWhat: İskele ayaklarında biriken midye, kekamoz ve yosun zamanla beton ve metal yapılarda korozyonu tetikler; bu da yapının taşıma kapasitesini ve çevredeki koku düzeyini olumsuz etkiler. Yüksek basınçlı su jetiyle yapıya zarar vermeden derinlemesine temizlik yapıyoruz.
@@ -50,6 +54,7 @@ services:
 
   - id: arama-kurtarma
     icon: search
+    iconImg: svc-arama-kurtarma.png
     title: Profesyonel Arama & Kurtarma Operasyonları
     short: Suyun altında kaybolan eşya ve ekipmanlarınız için arama-kurtarma.
     forWhat: Denize düşen değerli eşyalar, tekne ekipmanları veya endüstriyel parçalar için sualtı arama ve kurtarma operasyonları yürütüyoruz. Görüşün düşük olduğu zorlu şartlarda dahi kayıp nesneleri tespit edip güvenle yüzeye çıkarmayı hedefliyoruz.
@@ -61,6 +66,7 @@ services:
 
   - id: genel-endustriyel-dalgiclik
     icon: wrench
+    iconImg: svc-endustriyel.png
     title: Genel Endüstriyel Dalgıçlık Hizmetleri
     short: Endüstriyel dalgıçlığa giren sualtı işçilik ve raporlama hizmetleri.
     forWhat: Endüstriyel dalgıçlık alanına giren sualtı mühendislik ve işçilik ihtiyaçlarınızda profesyonel çözüm ortağınızız.

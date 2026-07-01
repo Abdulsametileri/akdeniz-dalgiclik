@@ -164,6 +164,8 @@ ul{margin:0;padding:0;list-style:none}
 .card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#cfe0ee}
 .card:hover::before{width:100%}
 .card-ic{display:inline-flex;align-items:center;justify-content:center;width:54px;height:54px;border-radius:14px;background:linear-gradient(150deg,var(--deep),var(--sea));color:#fff;margin-bottom:16px}
+.card-ic--img{width:64px;height:64px;border-radius:0;background:none;color:inherit;object-fit:contain;filter:drop-shadow(0 3px 6px rgba(7,24,39,.15))}
+.svc-head .card-ic--img{width:56px;height:56px}
 .card-title{font-size:1.2rem;color:var(--navy);margin-bottom:.45em}
 .card-text{color:var(--muted);font-size:.98rem;margin:0 0 18px}
 .card-link{margin-top:auto;display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--deep)}
