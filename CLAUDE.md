@@ -35,11 +35,22 @@ statik servis eder. Bağlantı: `wrangler.toml` (repo kökünde, `name` Worker a
 ## İçerik nasıl düzenlenir (kod değil, veri)
 İçeriğin neredeyse tamamı veri/parametre dosyalarındadır — layout’a dokunmadan düzenlenir:
 - `hugo.toml` → `[params]`: **iletişim bilgileri (TEK KAYNAK)**, marka, bölge, OG görseli, menü.
-- `data/services.yaml` → 6 hizmet (ana sayfa kartları + Hizmetler sayfası detayları).
-- `data/gallery.yaml` → galeri foto’ları (dosya, alt, başlık, açıklama, opsiyonel `objpos`).
-- `data/videos.yaml` → saha videoları (src, poster, w/h, başlık, açıklama).
+- `data/services.yaml` → 6 hizmet (ana sayfa kartları + Hizmetler kart ızgarası + her hizmetin **detay sayfası**).
+- `data/gallery.yaml` → galeri foto’ları (dosya, `service`, alt, başlık, açıklama, opsiyonel `objpos`).
+  `service` = ilgili hizmet `id`’si; foto o hizmetin detay sayfasında ve anasayfa “Yapılan İşler”de o sayfaya linkler.
+- `data/videos.yaml` → saha videoları (src, `service`, poster, w/h, başlık, açıklama).
+  `service` = ilgili hizmet `id`’si; video o hizmetin detay sayfasında + Galeri sayfasında gösterilir.
 - `data/trust.yaml` → “Neden biz?” güven unsurları.
 - `content/*/_index.md` → sayfa başlığı, SEO `description`, `lead`, opsiyonel `ogImage`.
+- `content/hizmetler/<id>.md` → **hizmet detay sayfaları** (her hizmet için bir dosya). Front matter
+  yalnız `title` + `svcId` (services.yaml `id` ile eşleşir) + benzersiz `description` + opsiyonel `ogImage`
+  taşır; asıl içerik services.yaml’dan gelir. Şablon: `layouts/hizmetler/single.html` (üstte foto galerisi +
+  video, altında açıklama + WhatsApp CTA — medya yoksa o blok gizlenir). Liste: `layouts/hizmetler/list.html` kart ızgarası.
+
+## Anasayfa bölümleri (`layouts/index.html`)
+hero → services → trust → **works** (Yapılan İşler) → cta. `sections/works.html` = foto ızgarası; her kare
+ilgili hizmetin detay sayfasına gider. Anasayfada ayrı “Saha Videoları” bölümü **yok** (videolar detay
+sayfalarına ve Galeri sayfasına taşındı). `sections/gallery.html` + `sections/videos.html` yalnız Galeri sayfasında (lightbox’lı).
 
 ## İletişim bilgileri — `hugo.toml [params]` (TEK KAYNAK, GERÇEK)
 İletişimi değiştirmek için **sadece burayı** güncelle (tüm site otomatik günceller):

@@ -1,8 +1,11 @@
 # Saha videoları. Self-host (static/videos) — küçük H.264 MP4, lazy (preload=none).
 # poster: assets/images/video-posters altındaki dosya. w/h: video oranı (CLS önlemek için).
+# service: hangi hizmet detay sayfasında (layouts/hizmetler/single.html) gösterileceği;
+#          data/services.yaml içindeki id ile eşleşir. Galeri sayfasında hepsi listelenir.
 # Yeni video eklemek için: dosyayı static/videos'a koy, poster üret, buraya satır ekle.
 items:
   - src: /videos/sualti-jet-kazik.mp4
+    service: iskele-su-jeti-temizlik
     poster: video-posters/sualti-jet-kazik.jpg
     w: 816
     h: 464
@@ -10,6 +13,7 @@ items:
     caption: Sualtında jet ile birikinti temizleme çalışması.
 
   - src: /videos/sualti-kaynak.mp4
+    service: sualti-kaynak-o2-kesim
     poster: video-posters/sualti-kaynak.jpg
     w: 1280
     h: 720
@@ -17,6 +21,7 @@ items:
     caption: Saha koşullarına uygun sualtı kaynak desteği.
 
   - src: /videos/gemi-alti-pervane.mp4
+    service: tekne-yat-bakim
     poster: video-posters/gemi-alti-pervane.jpg
     w: 816
     h: 464

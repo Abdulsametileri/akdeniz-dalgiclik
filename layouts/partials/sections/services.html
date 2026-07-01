@@ -11,7 +11,7 @@
         {{ partial "svc-icon.html" (dict "svc" . "size" 64) }}
         <h3 class="card-title">{{ .title }}</h3>
         <p class="card-text">{{ .short }}</p>
-        <a class="card-link" href="/hizmetler/#{{ .id }}">Detay {{ partial "icon.html" (dict "name" "arrow" "size" 16) }}</a>
+        <a class="card-link" href="/hizmetler/{{ .id }}/">Detay ve fotoğraflar {{ partial "icon.html" (dict "name" "arrow" "size" 16) }}</a>
       </article>
       {{- end }}
     </div>

@@ -1,30 +1,14 @@
 {{ define "main" }}
-{{- $wa := partial "wa-url.html" . -}}
 {{ partial "page-hero.html" . }}
 <section class="section">
   <div class="container">
-    <div class="services-detail">
+    <div class="cards">
       {{- range site.Data.services.services }}
-      <article class="svc" id="{{ .id }}">
-        <div class="svc-head">
-          {{ partial "svc-icon.html" (dict "svc" . "size" 56) }}
-          <h2 class="svc-title">{{ .title }}</h2>
-        </div>
-        <p class="svc-short">{{ .short }}</p>
-        <div class="svc-cols">
-          <div class="svc-col">
-            <h3>Ne için kullanılır?</h3>
-            <p>{{ .forWhat }}</p>
-          </div>
-          <div class="svc-col">
-            <h3>Neleri kapsar?</h3>
-            <ul class="svc-where">
-              {{- range .where }}<li>{{ . }}</li>{{ end }}
-            </ul>
-          </div>
-        </div>
-        <p class="svc-report">{{ partial "icon.html" (dict "name" "camera" "size" 18) }} {{ .reporting }}</p>
-        <a class="btn btn-wa btn-sm" href="{{ $wa }}" target="_blank" rel="noopener">{{ partial "icon.html" (dict "name" "whatsapp" "size" 18) }} Bu hizmet için yazın</a>
+      <article class="card">
+        {{ partial "svc-icon.html" (dict "svc" . "size" 64) }}
+        <h2 class="card-title">{{ .title }}</h2>
+        <p class="card-text">{{ .short }}</p>
+        <a class="card-link" href="/hizmetler/{{ .id }}/">Detay ve fotoğraflar {{ partial "icon.html" (dict "name" "arrow" "size" 16) }}</a>
       </article>
       {{- end }}
     </div>

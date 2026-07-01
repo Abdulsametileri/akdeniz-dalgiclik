@@ -1,33 +1,42 @@
 # Galeri görselleri. file: assets/images altındaki dosya adı.
 # Görselde ne olduğu kesin bilinmediği için güvenli, genel ifadeler kullanıldı.
+# service: hangi hizmet detay sayfasında (layouts/hizmetler/single.html) gösterileceği.
+#          data/services.yaml içindeki id ile eşleşir. Anasayfa "Yapılan İşler" ızgarasında
+#          her kare, tıklanınca bu hizmetin detay sayfasına gider.
 items:
   - file: iskele-kazik-sualti-01.jpg
+    service: iskele-su-jeti-temizlik
     title: İskele Bölgesi Sualtı Kontrolü
     alt: Berrak suda iskele kazıklarının sualtından görünümü
     caption: Liman/iskele bölgesinde sualtı kontrol ve keşif çalışması.
 
   - file: sualti-kaynak-kesim-01.jpg
+    service: sualti-kaynak-o2-kesim
     title: Sualtı Kaynak / Kesim Çalışması
     alt: Sanayi dalgıcının sualtında kaynak ve kesim çalışması
     caption: Saha koşullarına uygun sualtı kaynak/kesim desteği.
 
   - file: iskele-kazik-sualti-03.jpg
+    service: iskele-su-jeti-temizlik
     title: İskele Kazığı Durum Tespiti
     alt: Deniz canlısı tutunmuş iskele kazığının sualtı görünümü
     caption: Kazık üzerinde birikinti ve durum değerlendirmesi.
 
   - file: dalgic-donanim-portre-02.jpg
+    service: genel-endustriyel-dalgiclik
     title: Saha Öncesi Donanım Hazırlığı
     alt: Sualtı kaskı ve donanımıyla sanayi dalgıcı
     caption: Dalış öncesi ekipman ve donanım hazırlığı.
     objpos: 50% 22%
 
   - file: iskele-kazik-sualti-02.jpg
+    service: iskele-su-jeti-temizlik
     title: Kazık Üzerinde Birikinti Kontrolü
     alt: Kum zemin üzerinde tek iskele kazığının sualtı görünümü
     caption: İskele kazığında canlı tutunması ve durum kontrolü.
 
   - file: dalgic-maske-portre-01.jpg
+    service: genel-endustriyel-dalgiclik
     title: Profesyonel Dalış Donanımı
     alt: Profesyonel sualtı maskesi ve hava hattıyla dalgıç
     caption: Yüzey beslemeli dalış donanımıyla saha çalışmasına hazırlık.

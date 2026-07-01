@@ -1,0 +1,28 @@
+{{- /* Anasayfa "Yapılan İşler" — her kare, ilgili hizmetin detay sayfasına (foto + açıklama + video) gider.
+       Görseller data/gallery.yaml'dan; her öğenin `service` alanı hedef hizmeti belirler. */ -}}
+{{- $items := first 6 site.Data.gallery.items -}}
+<section class="section section-tint" id="isler">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Yapılan İşler</p>
+      <h2 class="section-title">Sahadan İş Örnekleri</h2>
+      <p class="section-lead">Bir kareye dokunun; o işin detay sayfasına, açıklaması ve diğer fotoğraf/videolarıyla birlikte ulaşın.</p>
+    </div>
+    <div class="gallery">
+      {{- range $items }}
+      <figure class="gal-item">
+        <a class="gal-link" href="/hizmetler/{{ .service }}/" aria-label="{{ .title }} — hizmet detayı"{{ with .objpos }} style="--pos:{{ . }}"{{ end }}>
+          {{ partial "img.html" (dict "src" .file "alt" .alt "sizes" "(min-width:900px) 33vw, (min-width:560px) 50vw, 100vw" "class" "gal-img") }}
+          <figcaption class="gal-cap">
+            <span class="gal-cap-t">{{ .title }}</span>
+            <span class="gal-cap-d">{{ .caption }}</span>
+          </figcaption>
+        </a>
+      </figure>
+      {{- end }}
+    </div>
+    <div class="works-more">
+      <a class="btn btn-outline" href="/galeri/">Tüm galeri ve videolar {{ partial "icon.html" (dict "name" "arrow" "size" 16) }}</a>
+    </div>
+  </div>
+</section>
