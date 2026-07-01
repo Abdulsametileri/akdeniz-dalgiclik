@@ -16,24 +16,17 @@ items:
     alt: Sanayi dalgıcının sualtında kaynak ve kesim çalışması
     caption: Saha koşullarına uygun sualtı kaynak/kesim desteği.
 
-  - file: iskele-kazik-sualti-03.jpg
-    service: iskele-su-jeti-temizlik
-    title: İskele Kazığı Durum Tespiti
-    alt: Deniz canlısı tutunmuş iskele kazığının sualtı görünümü
-    caption: Kazık üzerinde birikinti ve durum değerlendirmesi.
-
-  - file: dalgic-donanim-portre-02.jpg
-    service: genel-endustriyel-dalgiclik
-    title: Saha Öncesi Donanım Hazırlığı
-    alt: Sualtı kaskı ve donanımıyla sanayi dalgıcı
-    caption: Dalış öncesi ekipman ve donanım hazırlığı.
-    objpos: 50% 22%
-
   - file: iskele-kazik-sualti-02.jpg
     service: iskele-su-jeti-temizlik
     title: Kazık Üzerinde Birikinti Kontrolü
     alt: Kum zemin üzerinde tek iskele kazığının sualtı görünümü
     caption: İskele kazığında canlı tutunması ve durum kontrolü.
+
+  - file: boru-hatti-tonoz-atma-01.jpg
+    service: boru-hatti-doseme-tonoz-atma
+    title: Boru Hattı Döşeme & Tonoz Atma
+    alt: Sanayi dalgıcının sualtında boru hattı döşeme ve tonoz atma çalışması
+    caption: Deniz yapıları için sualtı boru hattı döşeme ve tonoz yerleştirme desteği.
 
   - file: dalgic-maske-portre-01.jpg
     service: genel-endustriyel-dalgiclik
